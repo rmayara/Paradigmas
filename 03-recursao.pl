@@ -5,8 +5,8 @@ pai(orozimbo, otavio).
 pai(otavio, luis).
 irmao(orozimbo, manuel).
 
-ancestral(X, Y) :- mae(X, Y); pai(X, Y).            /* ";" para "ou" */
-ancestral(X, Y) :- (mae(X, Z); pai(X, Z)), ancestral(Z, Y).    /* "," para "e" */
+ancestral(X, Y) :- mae(X, Y); pai(X, Y). % * ";" para "ou". => Criterio de parada
+ancestral(X, Y) :- (mae(X, Z); pai(X, Z)), ancestral(Z, Y). % "," para "e" => Regra recursiva
 
 /*
 ?- ancestral(maria, luis).
