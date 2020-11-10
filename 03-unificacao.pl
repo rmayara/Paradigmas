@@ -7,12 +7,14 @@ candidato(pedro,20,sao_paulo).
 candidato(joao,29,recife).
 candidato(kelly,40,recife).
 candidato(paula,34,recife).
+candidato(fernando,32,olinda).
 candidato(joao,39,belo_horizonte).
 candidato(moises,19,belo_horizonte).
 candidato(otavio,45,belo_horizonte).
 
 cidade(sao_paulo,sao_paulo).
 cidade(recife,pernambuco).
+cidade(olinda,pernambuco).
 cidade(belo_horizonte,minas_gerais).
 
 % Regras

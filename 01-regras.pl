@@ -4,7 +4,7 @@ gosta_de(jose, vanessa).
 gosta_de(maria, jose).
 gosta_de(maria, vinicius).
 gosta_de(vanessa, maria).
-gosta_de(vanessa, vinicus).
+gosta_de(vanessa, vinicius).
 gosta_de(vinicius, vanessa).
 
 % Regras
