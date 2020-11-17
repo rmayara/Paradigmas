@@ -9,5 +9,5 @@ irmao(orozimbo, adelia).
 % tio-avô (masculino)
 % sogro(a)
 % cunhado(a)
-% primos(as) diretos
-% primos(as) indiretos
+% primos(as) diretos (primeiro grau)
+% (desafio) primos(as) indiretos (segundo/terceiro grau)
