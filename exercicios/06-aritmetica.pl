@@ -1,3 +1,4 @@
 % dada uma lista L de números, como calculo o maximo N?
-% max(N,L).
+% L = [0, 10, 3, -2], N = 10
+% max(N,L). 
 
