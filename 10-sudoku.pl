@@ -28,4 +28,4 @@ sudoku(Sudoku,Solucao) :-
            Coluna1, Coluna2, Coluna3, Coluna4,
            Quadrado1, Quadrado2, Quadrado3, Quadrado4]).
 
-% sudoku([_,_,2,3,_,_,_,_,_,_,_,_,3,4,_,_],Solucacao).
+% sudoku([_,_,2,3,_,_,_,_,_,_,_,_,3,4,_,_],Solucao).

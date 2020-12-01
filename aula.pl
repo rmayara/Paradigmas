@@ -1,31 +1,32 @@
-% N = N*n-1*...*1
+% sudoku([_,_,2,3,
+%          _,_,_,_,
+%          _,_,_,_,
+%          3,4,_,_],Solucao).
+% sudoku([_,_,2,3,_,_,_,_,_,_,_,_,3,4,_,_],Solucao).
 
-% fatorial(N,R)
-% fatorial(3,6)
-% N = 3, Resultado is 6, M = 2, fatorial(2,2)
-% fatorial(2,2)
-% N = 2, Resultado is 2, M = 1, fatorial(1,1)
-% fatorial(1,1)
-% N = 1, Resultado is 1, M = 0, fatorial(0,1)
-% fatorial(0,Parcial) => Parcial = 1
+todos_diferentes(X, Y, Z, W) :- 
+    \+ (X = Y), \+ (X = Z), \+ (X = W),
+    \+ (Y = Z), \+ (Y = W), \+ (Y = X),
+    \+ (Z = X), \+ (Z = Y), \+ (Z = W).
+    
+sudoku(Sudoku,Saida) :-
+    Saida = Sudoku,
+    Sudoku = [A11, A12, A13, A14,
+              A21, A22, A23, A24,
+              A31, A32, A33, A34,
+              A41, A42, A43, A44],
+    fd_domain(Saida,1,4),
+    fd_all_different([A11, A12, A21, A22]), % Q1
+    fd_all_different([A13, A14, A23, A24]), % Q2
+    fd_all_different([A31, A32, A41, A42]), % Q3
+    fd_all_different([A33, A34, A43, A44]), % Q4
 
-fatorial(0, 1).
-fatorial(N, Resultado) :-
-    N > 0,
-    M is N-1,
-    fatorial(M, Parcial),
-    Resultado is N * Parcial.
+    fd_all_different([A11, A12, A13, A14]), % Linha 1
+    fd_all_different([A21, A22, A23, A24]), % Linha 2
+    fd_all_different([A31, A32, A33, A34]), % Linha 3
+    fd_all_different([A41, A42, A43, A44]), % Linha 4
 
-% contar(N, L). => L = [1,2,3], N=3
-
-contar(0,[]).
-contar(N, [_|Cauda]) :- contar(NContador,Cauda), N is NContador + 1.
-% [1, 2, 3], Cauda = [2,3], 2, N is 2 + 1 = 3
-% [2, 3], Cauda = [3], 1, N is 1 + 1 = 2
-% [3], Cauda = [], 0, N is 0 + 1 = 1
-% [], 0
-
-somar(0,[]).
-somar(Total,[H|Cauda]) :- somar(Soma,Cauda), Total is Soma + H.
-
-media(Media, Lista) :- somar(Soma, Lista), contar(Contador, Lista), Media is Soma/Contador.
+    fd_all_different([A11, A21, A31, A41]), % Coluna 1
+    fd_all_different([A12, A22, A32, A42]), % Coluna 2
+    fd_all_different([A13, A23, A33, A43]), % Coluna 3
+    fd_all_different([A14, A24, A34, A44]). % Coluna 4
