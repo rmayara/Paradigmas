@@ -1,5 +1,6 @@
-concatena([], X, X). % caso base da recursao. 3o argumento ou O segundo X é o resultado.
-concatena([Cabecalho|Cauda], Y, [Cabecalho|Z]) :- concatena(Cauda, Y, Z).
+concatenar([],L,L).
+concatenar([H|[]], Y, [H|Y]).
+concatenar([H|T], Y, [H|Z]) :- concatenar(T, Y, Z).
 
 pertence(X, [X|_]).
 pertence(X, [_ | Y]) :- pertence(X, Y).

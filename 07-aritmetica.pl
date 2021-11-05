@@ -1,25 +1,14 @@
-% fatorial
-fatorial(0, 1). 
-fatorial(N, Resultado) :- 
-  N > 0,
-  M is N - 1,
-  fatorial(M, Parcial),
-  Resultado is N * Parcial.
+pop(eua, 203).
+pop(india, 548).
+pop(china, 800).
+pop(brasil, 108).
 
-% contando usando recursao e listas
-contar(0, []).
-contar(Contador, [_|Tail]) :- contar(ContadorTail, Tail), Contador is ContadorTail + 1.
+area(eua, 8).
+area(india, 3).
+area(china, 10).
+area(brasil, 8).
 
-soma(0, []).
-soma(Total, [Head|Tail]) :- soma(Soma, Tail), Total is Head + Soma.
-
-media(Media, Lista) :- soma(Soma, Lista), contar(Contador, Lista), Media is Soma/Contador.
-
-% between
-bla(0, 1). 
-bla(X, R) :- 
-  between(0, 10, X),
-  R is X + 12.
-bla(X, R) :- 
-  X >= 10 ,
-  R is X + 25.
+dens(X, Y) :-
+    pop(X, P),
+    area(X, A),
+    Y is P/A.
