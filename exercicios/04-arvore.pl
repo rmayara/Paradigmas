@@ -1,10 +1,11 @@
 mae(maria, joana).
 mae(joana, luis).
 mae(cleia, otavio).
+pai(joao, joana).
 pai(orozimbo, otavio).
 pai(otavio, luis).
+pai(serafim, orozimbo).
 irmao(orozimbo, manuel).
-irmao(orozimbo, adelia).
 
 % tio-avô (masculino)
 % sogro(a)
