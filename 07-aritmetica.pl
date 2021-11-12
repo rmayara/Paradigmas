@@ -8,7 +8,7 @@ area(india, 3).
 area(china, 10).
 area(brasil, 8).
 
-dens(X, Y) :-
-    populacao(X, P),
-    area(X, A),
-    Y is P/A.
+dens(PAIS, DENSIDADE) :-
+    populacao(PAIS, P),
+    area(PAIS, A),
+    DENSIDADE is P/A.
