@@ -1,28 +1,26 @@
 /* 
 
 Part 1: Write queries to answer the following questions.
-    a. In which year was the movie American Beauty released?
-    b. Find the movies released in the year 2000.
-    c. Find the movies released before 2000.
-    (d.) Find the movies released after 1990.
-    x e. Find an actor who has appeared in more than one movie.
-    (f.) Find a director of a movie in which Scarlett Johansson appeared.
-    (g.) Find an actor who has also directed a movie.
-    (h.) Find an actor or actress who has also directed a movie.
-    i. Find the movie in which John Goodman and Jeff Bridges were co-stars.
+    a. Qual ano american_beauty foi lançado?
+    b. Filmes lançados em 2000.
+    c. Filmes lançados antes 2000.
+    d. Filmes lançados depois de 1990.
+    e. Diretores em filmes que Scarlett Johansson aparece.
+    f. Ator ou atriz que também foi diretor..
+    g. Filme em que John Goodman e Jeff Bridges forma co-estrelas.
 
-Part 2: Add rules to the database to do the following,
-    a. released_after(M, Y) <- the movie was released after the given year.
-    b. released_before(M, Y) <- the movie was released before the given year.
-    c. same_year(M1, M2) <- the movies are released in the same year.
-    d. co_star(A1, A2) <- the actor/actress are in the same movie.
+Part 2: Adicionar as seguintes regras,
+    a. lancado_depois(M, Y) <- filme foi lançado depois de um ano.
+    b. lancado_antes(M, Y) <- filme foi lançado antes de um ano.
+    c. mesmo_ano(M1, M2) <- <- filme foi lançados no mesmo no.
+    d. co_star(A1, A2) <- Ator ou atriz que for co-estrelas
 */
 
 /* DATABASE
-    movie(M, Y) <- movie M came out in year Y
-    director(M, D) <- movie M was directed by director D
-    actor(M, A, R) <- actor A played role R in movie M
-    actress(M, A, R) <- actress A played role R in movie M
+    movie(M, Y) <- filme M em lançado em um ano
+    director(M, D) <- filme M dirigido por diretor D
+    actor(M, A, R) <- ator A fez papel R no filme M
+    actress(M, A, R) <- ator A fez papel R no filme M
 */
 
 :- discontiguous(movie/2).
